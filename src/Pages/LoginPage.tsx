@@ -3,7 +3,7 @@ import axios from "axios";
 import { redirect, useLocation, useNavigate } from "react-router-dom";
 import { ENVIRONMENT_URL } from "../Api/config";
 
-interface userFrontToPost {
+interface clientLoginPost {
   email: string
   password: string
 }
@@ -11,7 +11,7 @@ interface userFrontToPost {
 function LoginPage() {
   const navigate = useNavigate();
 
-  const Login = async (values: userFrontToPost) =>{
+  const Login = async (values: clientLoginPost) =>{
     try {
       const response = await axios.post(`${ENVIRONMENT_URL}/login`, values);
 
@@ -19,7 +19,7 @@ function LoginPage() {
         localStorage.setItem("user", JSON.stringify(response.data.user));
         localStorage.setItem("token", response.data.token);
         message.success("Login Successful!");
-        return navigate("/create");
+        return navigate("/client");
       }
     } catch (error) {
       console.log(error);
@@ -51,7 +51,7 @@ function LoginPage() {
         </Form.Item>
         <Button type="primary" htmlType="submit" block>Login</Button>
         <Divider style={{borderColor: "black"}}>or create Account</Divider>
-        <Button type="default" htmlType="submit" block>Create Account</Button>
+        <Button type="default" htmlType="submit" block onClick={() => navigate("/create")}>Create Account</Button>
       </Form>
     </div>
   )

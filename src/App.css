@@ -8,6 +8,16 @@
   background-size: cover;
 }
 
+.create-page-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("./assets/mountains-1412683.svg");
+  background-size: cover;
+}
+
 .loginForm{
   background-color: rgba(255, 255, 255, 0.33);
   box-shadow: 0px 8px 32px 0 rgba(0, 0, 255, 0.3);
