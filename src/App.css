@@ -8,6 +8,26 @@
   background-size: cover;
 }
 
+.createpet-page-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("./assets/mountain.jpg");
+  background-size: cover;
+}
+
+.client-page-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("./assets/cat-2170495.jpg");
+  background-size: cover;
+}
+
 .create-page-container{
   display: flex;
   justify-content: center;
@@ -27,5 +47,5 @@
 }
 
 #root{
-  background-color: rgb(154, 0, 0);
+  /* background-color: rgb(118, 118, 118); */
 }
